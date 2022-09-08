@@ -1,9 +1,6 @@
-puts "🌱 Seeding spices..."
-
-# Seed your database here
-Pet.create(name: "Aura", breed: "Exotic shorthair", age: 1, color: "black", category: "female", image_url: )
-Pet.create(name: "Pandora", breed: "Bengal", age: 1.5, color: "black & white", category: "female", image_url:)
-Pet.create(name: "Sophia", breed: "American curl", age: 2, color: "brown", category: "female", image_)
+Pet.create(name: "Aura", breed: "Exotic shorthair", age: 1, color: "black", category: "female")
+Pet.create(name: "Pandora", breed: "Bengal", age: 1.5, color: "black & white", category: "female")
+Pet.create(name: "Sophia", breed: "American curl", age: 2, color: "brown", category: "female")
 Pet.create(name: "Dalila", breed: "American shorthair", age: 3, color: "brown & white", category: "female")
 Pet.create(name: "Hasina", breed: "Persian", age: 2.2, color: "white", category: "female")
 Pet.create(name: "Atlas", breed: "Exotic shorthair", age: 5, color: "white", category: "male")
@@ -21,5 +18,24 @@ Petlover.create(name: "Natasha", contact: "687923456", address: "Mombasa", gende
 Petlover.create(name: "Ken", contact: "203948576", address: "Meru", gender: "male")
 Petlover.create(name: "Avril", contact: "395058585", address: "Kisumu", gender: "female")
 
+create_table :pets do |t|
+    t.string :name
+    t.string :breed
+    t.string :category
+    t.float :age
+    t.string :color
+  end
 
-puts "✅ Done seeding!"
+  create_table :petlovers do |t|
+    t.string :name
+    t.integer :contact
+    t.string :address
+    t.string :gender
+  end
+
+  create_table :owners do |t|
+    t.string :name
+    t.integer :contact
+    t.string :address
+    t.string :firm
+  end

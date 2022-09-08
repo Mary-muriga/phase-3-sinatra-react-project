@@ -6,6 +6,7 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.string :category
       t.float :age
       t.string :color
+      t.text :image_url
     end
   end
 end

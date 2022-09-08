@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_07_184601) do
+ActiveRecord::Schema.define(version: 2022_09_08_131404) do
 
   create_table "owners", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_09_07_184601) do
     t.string "category"
     t.float "age"
     t.string "color"
+    t.text "image_url"
   end
 
 end
