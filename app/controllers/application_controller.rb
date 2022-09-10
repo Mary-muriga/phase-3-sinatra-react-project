@@ -15,10 +15,10 @@ class ApplicationController < Sinatra::Base
      pet.to_json
    end
 
-  # get "/pets/:id" do
-  #    pet = Pet.find(params[:id])
-  #    pet.to_json(include: :owners)
-  #  end
+    get "/owners/petlovers" do
+       owner = Owner.all
+       owner.to_json(include: :petlovers)
+     end
 
    delete "/pets/:id" do
      pet = Pet.find(params[:id])
