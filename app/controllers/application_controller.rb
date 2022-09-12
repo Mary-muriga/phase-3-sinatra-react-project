@@ -51,6 +51,11 @@ class ApplicationController < Sinatra::Base
     owner.to_json
    end
 
+   get "/owners/:id" do
+    owner = Owner.find(params[:id])
+    owner.to_json
+  end
+
    get "/petlovers" do
     petlover = Petlover.all
     petlover.to_json
